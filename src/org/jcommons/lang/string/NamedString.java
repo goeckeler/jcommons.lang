@@ -13,20 +13,20 @@ import org.apache.commons.lang.text.StrSubstitutor;
  *
  * Usage:
  * <pre>
- *   MessageUtils.message("Hello ${name}.").with("name", "John").toString();
+ *   NamedString.message("Hello ${name}.").with("name", "John").toString();
  * </pre>
  *
  * @author Thorsten Goeckeler
  *
  * @see org.apache.commons.lang.text.StrSubstitutor
  */
-public class MessageUtils
+public class NamedString
 {
   private String text;
   private final Map<String, Object> values = new HashMap<String, Object>();
 
   /** Creates an empty message. */
-  public MessageUtils() {
+  public NamedString() {
     this(null);
   }
 
@@ -35,7 +35,7 @@ public class MessageUtils
    *
    * @param text the text with placeholders to be used, can be null
    */
-  public MessageUtils(final String text) {
+  public NamedString(final String text) {
     this.text = text;
   }
 
@@ -44,8 +44,8 @@ public class MessageUtils
    *
    * @return this to allow chaining
    */
-  public static MessageUtils message() {
-    return new MessageUtils();
+  public static NamedString message() {
+    return new NamedString();
   }
 
   /**
@@ -54,8 +54,8 @@ public class MessageUtils
    * @param text the text with placeholders to be used, can be null
    * @return this to allow chaining
    */
-  public static MessageUtils message(final String text) {
-    return new MessageUtils(text);
+  public static NamedString message(final String text) {
+    return new NamedString(text);
   }
 
   /**
@@ -64,7 +64,7 @@ public class MessageUtils
    * @param text the text with placeholders to be used, can be null
    * @return this to allow chaining
    */
-  public MessageUtils text(final String text) {
+  public NamedString text(final String text) {
     this.text = text;
     return this;
   }
@@ -76,7 +76,7 @@ public class MessageUtils
    * @param value the value of this placeholder, e.g. "John" or 12345
    * @return this to allow chaining
    */
-  public MessageUtils with(final String name, final Object value) {
+  public NamedString with(final String name, final Object value) {
     values.put(name, value);
     return this;
   }
@@ -86,7 +86,7 @@ public class MessageUtils
    *
    * @return this to allow chaining
    */
-  public MessageUtils clear() {
+  public NamedString clear() {
     values.clear();
     return this;
   }
