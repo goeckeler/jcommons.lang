@@ -192,4 +192,19 @@ public final class DateUtils
 
     return currentDate;
   }
+
+  /**
+   * Null-safe implementation to compare two dates against each other.
+   *
+   * @param lhs left-hand side date
+   * @param rhs right-hand side date
+   * @return -1 if the left hand is earlier, 1 if it is later, and 0 if it is the same as the right side
+   */
+  public static int compare(final Date lhs, final Date rhs) {
+    if (lhs == null) return (rhs == null ? 0 : -1);
+    if (lhs == rhs) return 0;
+    if (rhs == null) return 1;
+
+    return lhs.compareTo(rhs);
+  }
 }

@@ -6,6 +6,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
+import java.util.Date;
+
 import org.joda.time.DateTime;
 import org.junit.Test;
 
@@ -64,5 +66,19 @@ public class DateUtilsTest
     lenientDate = new DateTime(95, 03, 13, 0, 0, 0, 0);
     date = new DateTime(1995, 03, 15, 0, 0, 0, 0);
     assertEquals(ISO_DATE_FORMAT.format(date.toDate()), ISO_DATE_FORMAT.format(toCurrentCentury(lenientDate.toDate())));
+  }
+
+  /** Test method for {@link DateUtils#compare(java.util.Date, java.util.Date)}. */
+  @Test
+  public void testCompare() {
+    assertEquals(0, DateUtils.compare(null, null));
+    Date lhs = new Date();
+    assertTrue(DateUtils.compare(lhs, null) > 0);
+    assertTrue(DateUtils.compare(null, lhs) < 0);
+    assertEquals(0, DateUtils.compare(lhs, lhs));
+    Date rhs = new Date();
+    rhs.setTime(rhs.getTime() + 20);
+    assertTrue(DateUtils.compare(lhs, rhs) < 0);
+    assertTrue(DateUtils.compare(rhs, lhs) > 0);
   }
 }
