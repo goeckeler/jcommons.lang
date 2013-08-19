@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.jcommons</groupId>
+  <artifactId>jcommons-lang</artifactId>
+  <version>1.0.0</version>
+  <name>jcommons.lang</name>
+  <description>Java Common Libraries Extensions / Language Utilities</description>
+  <url>http://www.jcommons.org</url>
+  <scm>
+    <developerConnection>Thorsten Göckeler</developerConnection>
+    <url>http://github.com/goeckeler/jcommons.lang</url>
+  </scm>
+
+  <!-- Global settings -->
+  <properties>
+    <!-- default JDK version to be used -->
+    <jdk.version>1.7</jdk.version>
+
+    <!-- compiler setup -->
+    <source.jdk.version>${jdk.version}</source.jdk.version>
+    <target.jdk.version>${jdk.version}</target.jdk.version>
+    <!-- source file encoding for all files -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!-- ************************************************************************ -->
+    <!-- VERSIONS, SORTED ALPHABETICALLY -->
+    <!-- ************************************************************************ -->
+
+    <commons.lang.version>3.1</commons.lang.version>
+    <joda.version>2.1</joda.version>
+    <junit.version>4.11</junit.version>
+  </properties>
+
+  <build>
+    <!-- most common used command to run maven, so you can just hit "mvn" instead of "mvn clean install" -->
+    <defaultGoal>clean install</defaultGoal>
+
+    <plugins>
+      <!-- compiler setup -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>${source.jdk.version}</source>
+          <target>${target.jdk.version}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+    </dependency>
+  </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- Apache Commons -->
+      <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>${commons.lang.version}</version>
+      </dependency>
+
+      <!-- Date and Time API -->
+      <dependency>
+        <groupId>joda-time</groupId>
+        <artifactId>joda-time</artifactId>
+        <version>${joda.version}</version>
+      </dependency>
+
+      <!-- Testing -->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <type>jar</type>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
