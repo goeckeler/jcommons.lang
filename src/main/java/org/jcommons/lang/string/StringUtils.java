@@ -10,7 +10,7 @@ import java.text.MessageFormat;
  * @see org.apache.commons.lang.StringUtils
  */
 public final class StringUtils
-  extends org.apache.commons.lang.StringUtils
+  extends org.apache.commons.lang3.StringUtils
 {
   /** default empty (not-null) string */
   public static final String EMPTY = "";

@@ -1,6 +1,6 @@
 package org.jcommons.lang.clazz;
 
-import org.apache.commons.lang.StringUtils;
+import org.jcommons.lang.string.StringUtils;
 
 /**
  * String utilities that build upon {@link org.apache.commons.lang.ClassUtils}.
@@ -10,7 +10,7 @@ import org.apache.commons.lang.StringUtils;
  * @see org.apache.commons.lang.ClassUtils
  */
 public final class ClassUtils
-  extends org.apache.commons.lang.ClassUtils
+  extends org.apache.commons.lang3.ClassUtils
 {
   /** hide sole constructor */
   private ClassUtils() {

@@ -1,6 +1,6 @@
 package org.jcommons.lang.time;
 
-import static org.apache.commons.lang.time.DateFormatUtils.ISO_DATE_FORMAT;
+import static org.apache.commons.lang3.time.DateFormatUtils.ISO_DATE_FORMAT;
 import static org.jcommons.lang.time.DateUtils.toCurrentCentury;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -13,7 +13,7 @@ import org.junit.Test;
 
 /**
  * Tests for <code>DateUtils</code> helper class.
- *
+ * 
  * @author Thorsten Goeckeler
  */
 public class DateUtilsTest

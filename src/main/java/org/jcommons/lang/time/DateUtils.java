@@ -10,7 +10,7 @@ import java.util.*;
  * @author Thorsten Goeckeler
  */
 public final class DateUtils
-  extends org.apache.commons.lang.time.DateUtils
+  extends org.apache.commons.lang3.time.DateUtils
 {
   /** day formats to be tested */
   private static final List<String> DAY_FORMATS = new ArrayList<String>();

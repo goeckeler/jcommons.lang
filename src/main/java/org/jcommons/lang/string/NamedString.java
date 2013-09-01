@@ -3,7 +3,7 @@ package org.jcommons.lang.string;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.commons.lang.text.StrSubstitutor;
+import org.apache.commons.lang3.text.StrSubstitutor;
 
 /**
  * String utilities to support named messages.

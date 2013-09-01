@@ -8,7 +8,7 @@ package org.jcommons.lang.number;
  * @see org.apache.commons.lang.math.NumberUtils
  */
 public final class NumberUtils
-  extends org.apache.commons.lang.math.NumberUtils
+  extends org.apache.commons.lang3.math.NumberUtils
 {
   /** hide constructor */
   private NumberUtils() {

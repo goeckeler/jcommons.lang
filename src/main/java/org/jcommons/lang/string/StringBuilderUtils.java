@@ -1,6 +1,6 @@
 package org.jcommons.lang.string;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.jcommons.lang.number.NumberUtils;
 
 /**
@@ -11,7 +11,7 @@ import org.jcommons.lang.number.NumberUtils;
  * @see org.apache.commons.lang.text.StrBuilder
  */
 public final class StringBuilderUtils
-  extends org.apache.commons.lang.text.StrBuilder
+  extends org.apache.commons.lang3.text.StrBuilder
 {
   /** hide sole constructor */
   private StringBuilderUtils() {
