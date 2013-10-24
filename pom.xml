@@ -4,12 +4,15 @@
   <groupId>org.jcommons</groupId>
   <artifactId>jcommons-lang</artifactId>
   <version>1.0.0</version>
+  <packaging>jar</packaging>
+  
   <name>jcommons.lang</name>
   <description>Java Common Libraries Extensions / Language Utilities</description>
   <url>http://www.jcommons.org</url>
   <scm>
-    <developerConnection>Thorsten Göckeler</developerConnection>
     <url>http://github.com/goeckeler/jcommons.lang</url>
+    <connection>https://github.com/goeckeler/jcommons.lang.git</connection>
+    <developerConnection>https://github.com/goeckeler/jcommons.lang.git</developerConnection>
   </scm>
 
   <!-- Global settings -->
@@ -114,4 +117,20 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+  
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>goeckeler</id>
+      <name>Thorsten Göckeler</name>
+      <email>webmaster@jcommons.org</email>
+    </developer>
+  </developers>
 </project>
