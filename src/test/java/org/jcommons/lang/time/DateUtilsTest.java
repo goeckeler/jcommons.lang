@@ -43,7 +43,7 @@ public class DateUtilsTest
     assertTrue(date.isEqual(DateUtils.toTime("15.03.2010 14:15").getTime()));
     // without time component it shall return null so we know the difference between time and day
     assertNull(DateUtils.toTime("15.03.2010"));
-    assertTrue(date.toDateMidnight().isEqual(DateUtils.toTime("15.03.2010 00:00").getTime()));
+    assertTrue(date.toLocalDate().toDateTimeAtStartOfDay().isEqual(DateUtils.toTime("15.03.2010 00:00").getTime()));
 
     assertNull(DateUtils.toTime(null));
     assertNull(DateUtils.toTime("01.08."));
