@@ -1,9 +1,9 @@
 package org.jcommons.lang.string;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.jcommons.lang.string.StringBuilderUtils.appendIfNotEmpty;
 import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertThat;
 
 import org.junit.Ignore;
 import org.junit.Test;

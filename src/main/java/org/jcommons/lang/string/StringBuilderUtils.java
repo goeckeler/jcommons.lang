@@ -13,6 +13,8 @@ import org.jcommons.lang.number.NumberUtils;
 public final class StringBuilderUtils
   extends org.apache.commons.lang3.text.StrBuilder
 {
+  private static final long serialVersionUID = -2371182240527419968L;
+
   /** hide sole constructor */
   private StringBuilderUtils() {
   }

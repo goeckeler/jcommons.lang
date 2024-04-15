@@ -1,5 +1,7 @@
 package org.jcommons.lang.number;
 
+import static org.apache.commons.lang3.math.NumberUtils.compare;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.lessThan;
@@ -7,7 +9,6 @@ import static org.jcommons.lang.number.NumberUtils.compare;
 import static org.jcommons.lang.number.NumberUtils.isNotNull;
 import static org.jcommons.lang.number.NumberUtils.isNull;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
 import java.math.BigDecimal;
@@ -47,7 +48,7 @@ public class NumberUtilsTest
     // we check for value equality, not for object equality
     assertTrue(NumberUtils.equals(new BigDecimal(1), BigDecimal.ONE));
     // attention, a long is not a big decimal!
-    assertFalse(NumberUtils.equals(new Long(1), BigDecimal.ONE));
+    assertFalse(NumberUtils.equals(Long.valueOf(1), BigDecimal.ONE));
     
     assertFalse(NumberUtils.equals(0, null));
     assertFalse(NumberUtils.equals(null, 0));
@@ -64,10 +65,10 @@ public class NumberUtilsTest
     assertTrue(isNull(0L));
     assertTrue(isNull(0.0f));
     assertTrue(isNull(-0.0f));
-    assertTrue(isNull(new Long(0)));
-    assertTrue(isNull(new Integer(0)));
-    assertTrue(isNull(new Float(0.0)));
-    assertTrue(isNull(new Double(0.0)));
+    assertTrue(isNull(Long.valueOf(0)));
+    assertTrue(isNull(Integer.valueOf(0)));
+    assertTrue(isNull(Float.valueOf(0.0f)));
+    assertTrue(isNull(Double.valueOf(0.0)));
     assertTrue(isNull(BigDecimal.ZERO));
     
     // negative cases
@@ -75,15 +76,15 @@ public class NumberUtilsTest
     assertFalse(isNull(1L));
     assertFalse(isNull(1.0f));
     assertFalse(isNull(-1.0f));
-    assertFalse(isNull(new Long(1)));
-    assertFalse(isNull(new Integer(1)));
-    assertFalse(isNull(new Float(1.0)));
-    assertFalse(isNull(new Double(1.0)));
+    assertFalse(isNull(Long.valueOf(1)));
+    assertFalse(isNull(Integer.valueOf(1)));
+    assertFalse(isNull(Float.valueOf(1.0f)));
+    assertFalse(isNull(Double.valueOf(1.0)));
     assertFalse(isNull(BigDecimal.ONE));
 
     // attention - isNull considers only integer parts!
-    assertTrue(isNull(new Float(0.5f)));
-    assertTrue(isNull(new Double(0.9f)));
+    assertTrue(isNull(Float.valueOf(0.5f)));
+    assertTrue(isNull(Double.valueOf(0.9f)));
   }
 
   /** check if any number that exists or whose value is not zero is regarded as not null */
@@ -95,10 +96,10 @@ public class NumberUtilsTest
     assertFalse(isNotNull(0L));
     assertFalse(isNotNull(0.0f));
     assertFalse(isNotNull(-0.0f));
-    assertFalse(isNotNull(new Long(0)));
-    assertFalse(isNotNull(new Integer(0)));
-    assertFalse(isNotNull(new Float(0.0)));
-    assertFalse(isNotNull(new Double(0.0)));
+    assertFalse(isNotNull(Long.valueOf(0)));
+    assertFalse(isNotNull(Integer.valueOf(0)));
+    assertFalse(isNotNull(Float.valueOf(0.0f)));
+    assertFalse(isNotNull(Double.valueOf(0.0)));
     assertFalse(isNotNull(BigDecimal.ZERO));
     
     // negative cases
@@ -106,14 +107,14 @@ public class NumberUtilsTest
     assertTrue(isNotNull(1L));
     assertTrue(isNotNull(1.0f));
     assertTrue(isNotNull(-1.0f));
-    assertTrue(isNotNull(new Long(1)));
-    assertTrue(isNotNull(new Integer(1)));
-    assertTrue(isNotNull(new Float(1.0)));
-    assertTrue(isNotNull(new Double(1.0)));
+    assertTrue(isNotNull(Long.valueOf(1)));
+    assertTrue(isNotNull(Integer.valueOf(1)));
+    assertTrue(isNotNull(Float.valueOf(1.0f)));
+    assertTrue(isNotNull(Double.valueOf(1.0)));
     assertTrue(isNotNull(BigDecimal.ONE));
 
     // attention - isNotNull considers only integer parts!
-    assertFalse(isNotNull(new Float(0.5f)));
-    assertFalse(isNotNull(new Double(0.9f)));
+    assertFalse(isNotNull(Float.valueOf(0.5f)));
+    assertFalse(isNotNull(Double.valueOf(0.9f)));
   }
 }
