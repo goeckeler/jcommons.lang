@@ -1,6 +1,6 @@
 package org.jcommons.lang.time;
 
-import static org.apache.commons.lang3.time.DateFormatUtils.ISO_DATE_FORMAT;
+import static org.apache.commons.lang3.time.DateFormatUtils.ISO_8601_EXTENDED_DATE_FORMAT;
 import static org.jcommons.lang.time.DateUtils.toCurrentCentury;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -56,16 +56,18 @@ public class DateUtilsTest
     DateTime lenientDate = new DateTime(10, 03, 13, 0, 0, 0, 0);
     DateTime date = new DateTime(2010, 03, 15, 0, 0, 0, 0);
 
-    // System.out.println(ISO_DATE_FORMAT.format(lenientDate.toDate()));
-    // System.out.println(ISO_DATE_FORMAT.format(date.toDate()));
-    // System.out.println(ISO_DATE_FORMAT.format(toCurrentCentury(lenientDate.toDate())));
-    // System.out.println(ISO_DATE_FORMAT.format(toCurrentCentury(date.toDate())));
+    // System.out.println(ISO_8601_EXTENDED_DATE_FORMAT.format(lenientDate.toDate()));
+    // System.out.println(ISO_8601_EXTENDED_DATE_FORMAT.format(date.toDate()));
+    // System.out.println(ISO_8601_EXTENDED_DATE_FORMAT.format(toCurrentCentury(lenientDate.toDate())));
+    // System.out.println(ISO_8601_EXTENDED_DATE_FORMAT.format(toCurrentCentury(date.toDate())));
 
-    assertEquals(ISO_DATE_FORMAT.format(date.toDate()), ISO_DATE_FORMAT.format(toCurrentCentury(lenientDate.toDate())));
+    assertEquals(ISO_8601_EXTENDED_DATE_FORMAT.format(date.toDate()),
+        ISO_8601_EXTENDED_DATE_FORMAT.format(toCurrentCentury(lenientDate.toDate())));
 
     lenientDate = new DateTime(95, 03, 13, 0, 0, 0, 0);
     date = new DateTime(1995, 03, 15, 0, 0, 0, 0);
-    assertEquals(ISO_DATE_FORMAT.format(date.toDate()), ISO_DATE_FORMAT.format(toCurrentCentury(lenientDate.toDate())));
+    assertEquals(ISO_8601_EXTENDED_DATE_FORMAT.format(date.toDate()),
+        ISO_8601_EXTENDED_DATE_FORMAT.format(toCurrentCentury(lenientDate.toDate())));
   }
 
   /** Test method for {@link DateUtils#compare(java.util.Date, java.util.Date)}. */
