@@ -33,7 +33,7 @@
     <!-- VERSIONS, SORTED ALPHABETICALLY -->
     <!-- ************************************************************************ -->
 
-    <commons.lang.version>3.14.0</commons.lang.version>
+    <commons.lang.version>3.18.0</commons.lang.version>
     <joda.version>2.12.7</joda.version>
     <junit.version>4.13.2</junit.version>
     <junit.hamcrest.version>2.2</junit.hamcrest.version>
