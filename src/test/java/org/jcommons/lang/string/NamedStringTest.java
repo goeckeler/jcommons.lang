@@ -1,9 +1,9 @@
 package org.jcommons.lang.string;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /** Simply test if messages with named parameters can be easily used. */
 public class NamedStringTest

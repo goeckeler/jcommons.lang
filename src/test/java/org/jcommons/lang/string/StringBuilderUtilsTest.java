@@ -3,10 +3,10 @@ package org.jcommons.lang.string;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.jcommons.lang.string.StringBuilderUtils.appendIfNotEmpty;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /** check if extensions to StringBuilder actually work as expected */
 public class StringBuilderUtilsTest
@@ -55,7 +55,7 @@ public class StringBuilderUtilsTest
   
   /** do not append if string builder is null - attention, with enabled assertions this will fail */
   @Test
-  @Ignore
+  @Disabled
   public void shouldNotThrowException()
   {
     assertNull(appendIfNotEmpty(null, " Invoice #", "2012-03-13", null));

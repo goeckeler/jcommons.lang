@@ -8,12 +8,11 @@ import static org.hamcrest.Matchers.lessThan;
 import static org.jcommons.lang.number.NumberUtils.compare;
 import static org.jcommons.lang.number.NumberUtils.isNotNull;
 import static org.jcommons.lang.number.NumberUtils.isNull;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.math.BigDecimal;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /** check that number utilities work as expected */
 public class NumberUtilsTest

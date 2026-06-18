@@ -2,14 +2,14 @@ package org.jcommons.lang.time;
 
 import static org.apache.commons.lang3.time.DateFormatUtils.ISO_8601_EXTENDED_DATE_FORMAT;
 import static org.jcommons.lang.time.DateUtils.toCurrentCentury;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Date;
 
 import org.joda.time.DateTime;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Tests for <code>DateUtils</code> helper class.
