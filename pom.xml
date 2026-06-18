@@ -61,10 +61,36 @@
         </configuration>
       </plugin>
 
+      <!-- support to update plugins and dependencies -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>versions-maven-plugin</artifactId>
-        <version>2.16.2</version>
+        <version>2.13.0</version>
+        <configuration>
+          <!-- do not upgrade to early access versions -->
+          <ignoredVersions>(?i).*-(alpha|beta|m|rc|ea)([-.]?\d+)?</ignoredVersions>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>3.6.2</version>
+        <executions>
+          <execution>
+            <id>enforce-maven</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                  <version>3.9.0</version>
+                </requireMavenVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
 
       <!-- support release builds -->
