@@ -25,7 +25,7 @@
   <!-- Global settings -->
   <properties>
     <!-- default JDK version to be used -->
-    <java.version>21</java.version>
+    <java.version>25</java.version>
     <!-- source file encoding for all files -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
@@ -161,7 +161,7 @@
   <profiles>
     <!-- mvn release:perform -->
     <profile>
-      <id>jcommons-release</id>
+      <id>commons-release</id>
       <activation>
         <property>
           <!-- automatically set on mvn release -->
