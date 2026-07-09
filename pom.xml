@@ -55,8 +55,7 @@
           <executable>${JAVA_HOME}/bin/javac</executable>
           <!-- <compilerVersion>${java.version}</compilerVersion> -->
 
-          <source>${java.version}</source>
-          <target>${java.version}</target>
+          <release>${java.version}</release>
           <encoding>${project.build.sourceEncoding}</encoding>
         </configuration>
       </plugin>
